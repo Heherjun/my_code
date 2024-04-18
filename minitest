@@ -1,0 +1,31 @@
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def main():
+    numbers = list(range(1, 101))
+    numbers.reverse()
+    for num in numbers:
+        if is_prime(num):
+            continue
+        if num % 3 == 0 and num % 5 == 0:
+            print("FooBar", end=" ")
+        elif num % 3 == 0:
+            print("Foo", end=" ")
+        elif num % 5 == 0:
+            print("Bar", end=" ")
+        else:
+            print(num, end=" ")
+
+if __name__ == "__main__":
+    main()
