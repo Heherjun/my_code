@@ -1,4 +1,4 @@
-# About minitest file
+## About minitest file
 
 this code is to create a list of numbers from 100-1, within criteria :
 
